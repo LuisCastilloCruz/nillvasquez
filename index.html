@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nill Vasquez — Realismo & Minimal (Perú)</title>
+  <meta name="description"
+    content="Nill Vasquez — tatuador en Perú. Realismo en gran escala y minimalista de animales. Reserva tu cita." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Left rail nav (desktop) -->
+  <aside class="rail" aria-label="Navegación lateral">
+    <a class="rail__logo" href="#home" aria-label="Ir al inicio">
+      <span class="rail__mark">N</span>
+    </a>
+
+    <nav class="rail__nav">
+      <a class="rail__link is-active" href="#home">Home</a>
+      <a class="rail__link" href="#about">About</a>
+      <a class="rail__link" href="#work">Work</a>
+      <a class="rail__link" href="#book">Book</a>
+      <a class="rail__link" href="#contact">Contact</a>
+    </nav>
+
+
+    <div class="rail__social">
+      <!-- Instagram: nueva pestaña -->
+      <a class="iconbtn" href="https://www.instagram.com/nilvasquezs/" target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram" title="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor"
+            stroke-width="1.6" />
+          <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.6" />
+          <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </a>
+
+      <!-- WhatsApp: nueva pestaña + mensaje pro -->
+      <a class="iconbtn" id="waLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+        title="WhatsApp"
+        href="https://wa.me/51993262752?text=Hola%20Nill%20Vasquez%20%F0%9F%94%A5%0A%0AQuiero%20reservar%20una%20cita%20para%20un%20tatuaje%20con%20tu%20estilo%20(realismo%20/%20minimal).%0A%0A%E2%9C%85%20Estilo%3A%20_____%0A%E2%9C%85%20Zona%20del%20cuerpo%3A%20_____%0A%E2%9C%85%20Tama%C3%B1o%20aprox%3A%20_____%0A%E2%9C%85%20Idea%20/Referencia%3A%20_____%0A%E2%9C%85%20Disponibilidad%3A%20_____%0A%0A%E2%9C%A8%20Quiero%20que%20quede%20brutal.%20%C2%BFMe%20apoyas%20con%20la%20cotizaci%C3%B3n%20y%20fechas%3F"
+        target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M20 11.5a8 8 0 0 1-12.9 6.1L4 18l.5-3.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.6"
+            stroke-linejoin="round" />
+          <path
+            d="M9.2 9.4c.2-.5.4-.5.7-.5h.6c.2 0 .4.1.5.4l.6 1.4c.1.3.1.5-.1.7l-.4.4c-.1.1-.2.3-.1.5.3.8 1.2 1.7 2 2 .2.1.4 0 .5-.1l.4-.4c.2-.2.4-.2.7-.1l1.4.6c.3.1.4.3.4.5v.6c0 .3 0 .5-.5.7-.5.2-1.6.4-3.3-.3-1.7-.7-3.1-2.2-3.8-3.8-.7-1.7-.5-2.8-.3-3.3Z"
+            fill="currentColor" opacity=".9" />
+        </svg>
+      </a>
+    </div>
+
+
+
+  </aside>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <a class="topbar__brand" href="#home" aria-label="Inicio">
+        <span class="brand__name">Nill Vasquez</span>
+      </a>
+    </div>
+
+    <nav class="topbar__nav" aria-label="Navegación superior">
+      <a href="#home" class="toplink is-active">Home</a>
+      <a href="#about" class="toplink">About</a>
+      <a href="#work" class="toplink">Work</a>
+      <a href="#book" class="toplink">Book</a>
+      <a href="#contact" class="toplink">Contact</a>
+
+    </nav>
+
+    <div class="topbar__right">
+      <div class="lang">
+        <div id="google_translate_element"></div>
+      </div>
+      <a class="pillbtn" href="#book">Reservar</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <div class="drawer__title">Menú</div>
+        <button class="drawer__close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+      </div>
+
+      <nav class="drawer__nav">
+        <a href="#home" class="drawer__link">Home</a>
+        <a href="#about" class="drawer__link">About</a>
+        <a href="#work" class="drawer__link">Work</a>
+        <a href="#book" class="drawer__link">Book</a>
+        <a href="#contact" class="drawer__link">Contact</a>
+      </nav>
+
+      <div class="lang" style="margin: 12px 0;">
+        <div id="google_translate_element_mobile"></div>
+      </div>
+
+
+      <div class="drawer__cta">
+        <a class="pillbtn pillbtn--wide" href="#book">Reservar cita</a>
+      </div>
+    </div>
+    <div class="drawer__backdrop" id="drawerBackdrop"></div>
+  </div>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero__bg" id="heroBg" role="img" aria-label="Tatuaje realista en gran escala"></div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow reveal">Perú · Realismo & Minimal</p>
+
+        <h1 class="hero__title reveal">
+          Realismo<br />en gran escala.
+        </h1>
+
+        <p class="hero__sub reveal">
+          Piezas grandes. Detalle extremo.<br />
+          Retos que valen la pena.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#book">Reservar cita</a>
+          <a class="btn btn--ghost" href="#work">Work</a>
+        </div>
+
+        <div class="hero__previews reveal" aria-label="Previews">
+          <button class="preview" data-scroll="#work" aria-label="Ver realismo (preview)">
+            <span class="preview__img preview__img--realismo"></span>
+          </button>
+          <button class="preview" data-scroll="#work" aria-label="Ver minimal animales (preview)">
+            <span class="preview__img preview__img--animal"></span>
+          </button>
+          <button class="preview" data-scroll="#work" aria-label="Ver pieza destacada (preview)">
+            <span class="preview__img preview__img--featured"></span>
+          </button>
+        </div>
+
+        <div class="hero__scrollHint reveal" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="line"></span>
+          <span class="txt">Scroll</span>
+        </div>
+      </div>
+
+      <div class="hero__fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text">
+            <h2 class="section__title reveal">Sobre Nill</h2>
+
+            <p class="lead reveal">
+              Soy <strong>Nill Vasquez</strong>, tatuador en Perú. Me especializo en
+              <strong>realismo en gran escala</strong> y en <strong>minimalista de animales</strong>.
+            </p>
+
+            <p class="muted reveal">
+              Arte en piel con contraste, textura detallada y composición sólida para piezas retadoras.
+              En minimal, líneas limpias y elegancia: menos, pero con intención.
+            </p>
+
+            <div class="about__meta reveal">
+              <span class="chip">📍 Lima, Perú</span>
+              <a class="btn btn--primary btn--small" href="#book">Reservar</a>
+            </div>
+          </div>
+
+          <div class="about__photo reveal" aria-label="Foto del artista">
+            <div class="about__img"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section work">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal">Work</h2>
+        </div>
+
+        <!-- ✅ AUTO CAROUSEL (2 tracks) -->
+        <div class="marquee reveal" aria-label="Carrusel automático de trabajos">
+          <div class="marquee__edge marquee__edge--left" aria-hidden="true"></div>
+          <div class="marquee__edge marquee__edge--right" aria-hidden="true"></div>
+
+          <!-- Track A (izq->der o der->izq) -->
+          <div class="marquee__track marquee__track--a" data-speed="36">
+            <div class="marquee__group">
+              <button class="shot" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work1.jpg" alt="Trabajo 1" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work2.jpg" alt="Trabajo 2" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work3.jpg" alt="Trabajo 3" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work4.jpg" alt="Trabajo 4" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work5.jpg" alt="Trabajo 5" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work6.jpg" alt="Trabajo 6" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work7.jpg" alt="Trabajo 7" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work8.jpg" alt="Trabajo 8" loading="lazy" />
+              </button>
+            </div>
+
+            <!-- Duplicado para loop infinito -->
+            <div class="marquee__group" aria-hidden="true">
+              <button class="shot" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work1.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work2.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work3.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work4.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work5.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work6.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work7.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work8.jpg" alt="" loading="lazy" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Track B (dirección opuesta) -->
+          <div class="marquee__track marquee__track--b" data-speed="46">
+            <div class="marquee__group">
+              <button class="shot" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work8.jpg" alt="Trabajo 8" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work7.jpg" alt="Trabajo 7" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work6.jpg" alt="Trabajo 6" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work5.jpg" alt="Trabajo 5" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work4.jpg" alt="Trabajo 4" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work3.jpg" alt="Trabajo 3" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work2.jpg" alt="Trabajo 2" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work1.jpg" alt="Trabajo 1" loading="lazy" />
+              </button>
+            </div>
+
+            <div class="marquee__group" aria-hidden="true">
+              <button class="shot" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work8.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work7.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work6.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work5.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work4.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work3.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
+                <img src="./assets/work2.jpg" alt="" loading="lazy" />
+              </button>
+              <button class="shot" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
+                <img src="./assets/work1.jpg" alt="" loading="lazy" />
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ✅ Tu GRID original (se mantiene) -->
+        <div class="work__grid reveal">
+          <button class="work__card" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
+            <img class="work__thumb" src="./assets/work1.jpg" alt="Trabajo 1" loading="lazy" />
+            <span class="work__tag">COLOR / REALISMO</span>
+          </button>
+
+          <button class="work__card" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
+            <img class="work__thumb" src="./assets/work2.jpg" alt="Trabajo 2" loading="lazy" />
+            <span class="work__tag">BLACK & GREY</span>
+          </button>
+
+          <button class="work__card" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
+            <img class="work__thumb" src="./assets/work3.jpg" alt="Trabajo 3" loading="lazy" />
+            <span class="work__tag">COLOR / REALISMO</span>
+          </button>
+
+          <button class="work__card" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
+            <img class="work__thumb" src="./assets/work4.jpg" alt="Trabajo 4" loading="lazy" />
+            <span class="work__tag">BLACK & GREY</span>
+          </button>
+
+          <button class="work__card" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
+            <img class="work__thumb" src="./assets/work5.jpg" alt="Trabajo 5" loading="lazy" />
+            <span class="work__tag">BLACK & GREY</span>
+          </button>
+
+          <button class="work__card" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
+            <img class="work__thumb" src="./assets/work6.jpg" alt="Trabajo 6" loading="lazy" />
+            <span class="work__tag">BLACK & GREY</span>
+          </button>
+
+          <button class="work__card" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
+            <img class="work__thumb" src="./assets/work7.jpg" alt="Trabajo 7" loading="lazy" />
+            <span class="work__tag">COLOR / REALISMO</span>
+          </button>
+
+          <button class="work__card" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
+            <img class="work__thumb" src="./assets/work8.jpg" alt="Trabajo 8" loading="lazy" />
+            <span class="work__tag">BLACK & GREY</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- SPONSORS -->
+    <section id="sponsors" class="section sponsors">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal">Sponsors</h2>
+          <p class="section__hint reveal">Marcas con las que colaboro / uso en el estudio.</p>
+        </div>
+
+        <!-- ✅ Auto marquee (derecha -> izquierda) -->
+        <div class="sponsorsMarquee reveal" aria-label="Carrusel automático de sponsors">
+          <div class="sponsorsMarquee__edge sponsorsMarquee__edge--left" aria-hidden="true"></div>
+          <div class="sponsorsMarquee__edge sponsorsMarquee__edge--right" aria-hidden="true"></div>
+
+          <div class="sponsorsMarquee__track">
+            <div class="sponsorsMarquee__group">
+              <!-- ✅ pon aquí TODOS tus sponsors (uno por uno) -->
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="Radiant" loading="lazy" />
+              </div>
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="Radiant" loading="lazy" />
+              </div>
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="Radiant" loading="lazy" />
+              </div>
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="Radiant" loading="lazy" />
+              </div>
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="Radiant" loading="lazy" />
+              </div>
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="Radiant" loading="lazy" />
+              </div>
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="Radiant" loading="lazy" />
+              </div>
+
+              <!-- Ejemplos cuando tengas más -->
+              <!--
+          <div class="sponsorCard"><img src="./assets/sponsor/s2.png" alt="Sponsor 2" loading="lazy"></div>
+          <div class="sponsorCard"><img src="./assets/sponsor/s3.png" alt="Sponsor 3" loading="lazy"></div>
+          -->
+            </div>
+
+            <!-- ✅ duplicado automático para loop infinito -->
+            <div class="sponsorsMarquee__group" aria-hidden="true">
+              <div class="sponsorCard">
+                <img src="./assets/sponsor/sponsor.png" alt="" loading="lazy" />
+              </div>
+              <!-- copia lo mismo que arriba si agregas más sponsors -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BOOK -->
+    <section id="book" class="section book">
+      <div class="container">
+        <h2 class="book__title reveal">BOOK NOW</h2>
+
+        <div class="book__grid">
+          <form class="form reveal" id="bookingForm">
+            <div class="form__row">
+              <div class="field">
+                <label>Nombre completo*</label>
+                <input required name="name" placeholder="Ej: Ana Torres" />
+              </div>
+              <div class="field">
+                <label>WhatsApp*</label>
+                <input required name="whatsapp" placeholder="+51993262752" />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label>Email*</label>
+                <input required type="email" name="email" placeholder="correo@ejemplo.com" />
+              </div>
+              <div class="field">
+                <label>Instagram (opcional)</label>
+                <input name="instagram" placeholder="@tuusuario" />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label>Estilo*</label>
+                <select required name="style">
+                  <option value="">Selecciona…</option>
+                  <option>Realismo (pieza grande)</option>
+                  <option>Minimal (animales)</option>
+                  <option>Cover / reto complejo</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Zona del cuerpo*</label>
+                <select required name="zone">
+                  <option value="">Selecciona…</option>
+                  <option>Brazo</option>
+                  <option>Antebrazo</option>
+                  <option>Pierna / Muslo</option>
+                  <option>Espalda</option>
+                  <option>Pecho</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Describe tu idea*</label>
+              <textarea required name="idea" rows="4"
+                placeholder="Cuéntame el concepto, tamaño aproximado y referencias…"></textarea>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label>Referencias (imágenes)</label>
+                <input type="file" name="refs" accept="image/*" multiple />
+              </div>
+              <div class="field">
+                <label>Foto de la zona (opcional)</label>
+                <input type="file" name="zone_photo" accept="image/*" />
+              </div>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Enviar solicitud</button>
+              <p class="form__note">* Campos obligatorios. Respuesta por WhatsApp/Instagram.</p>
+            </div>
+          </form>
+
+          <div class="book__side">
+            <div class="card reveal">
+              <h3>Reglas rápidas</h3>
+              <ul>
+                <li>Trabajo por cita (separación con señal).</li>
+                <li>Reprogramaciones con anticipación.</li>
+                <li>Prioridad a piezas grandes y proyectos completos.</li>
+              </ul>
+            </div>
+
+            <div class="card reveal">
+              <h3>Contacto</h3>
+
+              <div class="contact__mini">
+                <a class="link" href="https://www.instagram.com/nilvasquezs/" target="_blank" rel="noopener noreferrer">
+                  Instagram
+                </a>
+
+                <a class="link"
+                  href="https://wa.me/51993262752?text=Hola%20Nill%20Vasquez%20%F0%9F%94%A5%0A%0AQuiero%20reservar%20una%20cita%20para%20un%20tatuaje%20con%20tu%20estilo%20(realismo%20/%20minimal).%0A%0A%E2%9C%85%20Estilo%3A%20_____%0A%E2%9C%85%20Zona%20del%20cuerpo%3A%20_____%0A%E2%9C%85%20Tama%C3%B1o%20aprox%3A%20_____%0A%E2%9C%85%20Idea%20/Referencia%3A%20_____%0A%E2%9C%85%20Disponibilidad%3A%20_____%0A%0A%E2%9C%A8%20Quiero%20que%20quede%20brutal.%20%C2%BFMe%20apoyas%20con%20la%20cotizaci%C3%B3n%20y%20fechas%3F"
+                  target="_blank" rel="noopener noreferrer">
+                  WhatsApp
+                </a>
+
+                <a class="link" href="mailto:Niltatts@gmail.com" target="_blank" rel="noopener noreferrer">
+                  Email
+                </a>
+              </div>
+
+              <div class="chip chip--soft">📍 Lima, Perú</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map" class="section map">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal">Mapa</h2>
+          <p class="section__hint reveal">Ubicación del estudio (haz clic para abrir en Google Maps).</p>
+        </div>
+
+        <div class="map__grid">
+          <div class="map__info">
+            <div class="card reveal">
+              <h3>Ubicación</h3>
+              <p class="muted" style="margin-top:0">
+                Lima, Perú <br />
+                Calle Bolívar 270, Miraflores 15074
+              </p>
+
+              <a class="btn btn--primary btn--small" id="openMapsBtn" href="#" target="_blank" rel="noopener">
+                Abrir en Google Maps
+              </a>
+
+              <div class="map__chips">
+                <span class="chip chip--soft">Horario: Lun–Sáb · 9am–10pm</span>
+                <span class="chip">Citas con señal</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map__frame reveal">
+            <iframe title="Mapa del estudio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=-12.1259416,-77.0272853&z=17&output=embed">
+            </iframe>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+      <div class="container footer__grid reveal">
+        <div>
+          <div class="footer__brand">Nill Vasquez</div>
+          <div class="footer__muted">Realismo · Minimal animales · Perú</div>
+        </div>
+
+        <div class="footer__links">
+          <a href="#about">Sobre</a>
+          <a href="#work">Work</a>
+          <a href="#book">Reservas</a>
+          <a href="#">Cuidados</a>
+        </div>
+
+        <div class="footer__small">
+          <div>© <span id="year"></span> Nill Vasquez</div>
+          <div class="footer__muted">Diseño minimal · rápido · responsive</div>
+
+          <a class="footer__credit" href="https://www.instagram.com/iam_luiscast/" target="_blank"
+            rel="noopener noreferrer">
+            Diseño & desarrollo: @iam_luiscast
+          </a>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Vista de trabajo">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close aria-label="Cerrar">✕</button>
+      <div class="modal__tag" id="modalTag">REALISMO</div>
+      <img class="modal__img" id="modalImg" alt="Tatuaje seleccionado" />
+      <div class="modal__actions">
+        <a class="btn btn--primary" href="#book" id="modalCta">Reservar algo similar</a>
+        <button class="btn btn--ghost" data-close>Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>
