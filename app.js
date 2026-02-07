@@ -26,34 +26,8 @@ $$(".preview").forEach((btn) => {
 });
 
 /* Drawer (mobile) */
-const drawer = $("#drawer");
-const burger = $("#burger");
-const drawerCloseBtn = $("#drawerClose");
-const drawerBackdrop = $("#drawerBackdrop");
 
-function openDrawer() {
-    if (!drawer || !burger) return;
-    drawer.classList.add("is-open");
-    drawer.setAttribute("aria-hidden", "false");
-    burger.setAttribute("aria-expanded", "true");
-}
-function closeDrawer() {
-    if (!drawer || !burger) return;
-    drawer.classList.remove("is-open");
-    drawer.setAttribute("aria-hidden", "true");
-    burger.setAttribute("aria-expanded", "false");
-}
 
-if (burger) {
-    burger.addEventListener("click", () => {
-        const open = drawer?.classList.contains("is-open");
-        open ? closeDrawer() : openDrawer();
-    });
-}
-if (drawerCloseBtn) drawerCloseBtn.addEventListener("click", closeDrawer);
-if (drawerBackdrop) drawerBackdrop.addEventListener("click", closeDrawer);
-
-/* Nav links smooth */
 function bindSmoothLinks(selector) {
     $$(selector).forEach((a) => {
         a.addEventListener("click", (e) => {
@@ -61,11 +35,12 @@ function bindSmoothLinks(selector) {
             if (href && href.startsWith("#")) {
                 e.preventDefault();
                 smoothTo(href);
-                closeDrawer();
+                drawer?.classList.remove("is-open");
             }
         });
     });
 }
+
 
 bindSmoothLinks(".rail__link");
 bindSmoothLinks(".toplink");
@@ -399,13 +374,65 @@ function googleTranslateElementInit() {
         { pageLanguage: "es", autoDisplay: false },
         "google_translate_element"
     );
-
-    // Si agregaste el del drawer
-    const el = document.getElementById("google_translate_element_mobile");
-    if (el) {
-        new window.google.translate.TranslateElement(
-            { pageLanguage: "es", autoDisplay: false },
-            "google_translate_element_mobile"
-        );
-    }
 }
+
+
+
+(function () {
+    const burger = document.getElementById("burger");
+    const drawer = document.getElementById("drawer");
+    const backdrop = document.getElementById("drawerBackdrop");
+    const closeBtn = document.getElementById("drawerClose");
+
+    const translateEl = document.getElementById("google_translate_element");
+    const slotTopbar = document.getElementById("langSlotTopbar");
+    const slotDrawer = document.getElementById("langSlotDrawer");
+
+    function openDrawer() {
+        if (!drawer || !burger) return;
+        drawer.classList.add("is-open");
+        drawer.setAttribute("aria-hidden", "false");
+        burger.setAttribute("aria-expanded", "true");
+        document.documentElement.style.overflow = "hidden";
+    }
+
+    function closeDrawer() {
+        if (!drawer || !burger) return;
+        drawer.classList.remove("is-open");
+        drawer.setAttribute("aria-hidden", "true");
+        burger.setAttribute("aria-expanded", "false");
+        document.documentElement.style.overflow = "";
+    }
+
+    burger?.addEventListener("click", () => {
+        drawer.classList.contains("is-open") ? closeDrawer() : openDrawer();
+    });
+
+    backdrop?.addEventListener("click", closeDrawer);
+    closeBtn?.addEventListener("click", closeDrawer);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeDrawer();
+    });
+
+    // cerrar al hacer click en link del drawer
+    drawer?.addEventListener("click", (e) => {
+        const a = e.target.closest("a");
+        if (a && a.getAttribute("href")?.startsWith("#")) closeDrawer();
+    });
+
+    // ✅ mover translate según ancho
+    function syncTranslatePlacement() {
+        if (!translateEl || !slotTopbar || !slotDrawer) return;
+
+        if (window.innerWidth <= 980) {
+            if (!slotDrawer.contains(translateEl)) slotDrawer.appendChild(translateEl);
+        } else {
+            if (!slotTopbar.contains(translateEl)) slotTopbar.appendChild(translateEl);
+        }
+    }
+
+    window.addEventListener("resize", syncTranslatePlacement);
+    window.addEventListener("load", syncTranslatePlacement);
+    syncTranslatePlacement();
+})();
