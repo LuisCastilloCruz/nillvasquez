@@ -20,6 +20,7 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="cursorGlow" aria-hidden="true"></div>
 
+
   <!-- Left rail nav (desktop) -->
   <aside class="rail" aria-label="Navegación lateral">
     <a class="rail__logo" href="#home" aria-label="Ir al inicio">
@@ -34,9 +35,8 @@
       <a class="rail__link" href="#contact">Contact</a>
     </nav>
 
-
     <div class="rail__social">
-      <!-- Instagram: nueva pestaña -->
+      <!-- Instagram -->
       <a class="iconbtn" href="https://www.instagram.com/nilvasquezs/" target="_blank" rel="noopener noreferrer"
         aria-label="Instagram" title="Instagram">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -47,9 +47,8 @@
         </svg>
       </a>
 
-      <!-- WhatsApp: nueva pestaña + mensaje pro -->
-      <a class="iconbtn" id="waLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-        title="WhatsApp"
+      <!-- WhatsApp (✅ limpio: 1 solo href) -->
+      <a class="iconbtn" id="waLink"
         href="https://wa.me/51993262752?text=Hola%20Nill%20Vasquez%20%F0%9F%94%A5%0A%0AQuiero%20reservar%20una%20cita%20para%20un%20tatuaje%20con%20tu%20estilo%20(realismo%20/%20minimal).%0A%0A%E2%9C%85%20Estilo%3A%20_____%0A%E2%9C%85%20Zona%20del%20cuerpo%3A%20_____%0A%E2%9C%85%20Tama%C3%B1o%20aprox%3A%20_____%0A%E2%9C%85%20Idea%20/Referencia%3A%20_____%0A%E2%9C%85%20Disponibilidad%3A%20_____%0A%0A%E2%9C%A8%20Quiero%20que%20quede%20brutal.%20%C2%BFMe%20apoyas%20con%20la%20cotizaci%C3%B3n%20y%20fechas%3F"
         target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -61,9 +60,6 @@
         </svg>
       </a>
     </div>
-
-
-
   </aside>
 
   <!-- Top bar -->
@@ -80,19 +76,22 @@
       <a href="#work" class="toplink">Work</a>
       <a href="#book" class="toplink">Book</a>
       <a href="#contact" class="toplink">Contact</a>
-
     </nav>
 
     <div class="topbar__right">
-      <div class="lang">
+      <!-- ✅ contenedor con estilo propio para Translate -->
+      <div class="lang" aria-label="Idioma">
         <div id="google_translate_element"></div>
       </div>
-      <a class="pillbtn" href="#book">Reservar</a>
-      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+
+
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" type="button">
         <span></span><span></span>
       </button>
     </div>
   </header>
+
+
 
   <!-- Mobile drawer -->
   <div class="drawer" id="drawer" aria-hidden="true">
@@ -205,12 +204,13 @@
           <h2 class="section__title reveal">Work</h2>
         </div>
 
-        <!-- ✅ AUTO CAROUSEL (2 tracks) -->
+
+        <!-- ✅ AUTO CAROUSEL (1 track / 1 fila) -->
         <div class="marquee reveal" aria-label="Carrusel automático de trabajos">
           <div class="marquee__edge marquee__edge--left" aria-hidden="true"></div>
           <div class="marquee__edge marquee__edge--right" aria-hidden="true"></div>
 
-          <!-- Track A (izq->der o der->izq) -->
+          <!-- Track Único -->
           <div class="marquee__track marquee__track--a" data-speed="36">
             <div class="marquee__group">
               <button class="shot" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
@@ -267,108 +267,32 @@
               </button>
             </div>
           </div>
-
-          <!-- Track B (dirección opuesta) -->
-          <div class="marquee__track marquee__track--b" data-speed="46">
-            <div class="marquee__group">
-              <button class="shot" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work8.jpg" alt="Trabajo 8" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
-                <img src="./assets/work7.jpg" alt="Trabajo 7" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work6.jpg" alt="Trabajo 6" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work5.jpg" alt="Trabajo 5" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work4.jpg" alt="Trabajo 4" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
-                <img src="./assets/work3.jpg" alt="Trabajo 3" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work2.jpg" alt="Trabajo 2" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
-                <img src="./assets/work1.jpg" alt="Trabajo 1" loading="lazy" />
-              </button>
-            </div>
-
-            <div class="marquee__group" aria-hidden="true">
-              <button class="shot" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work8.jpg" alt="" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
-                <img src="./assets/work7.jpg" alt="" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work6.jpg" alt="" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work5.jpg" alt="" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work4.jpg" alt="" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
-                <img src="./assets/work3.jpg" alt="" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
-                <img src="./assets/work2.jpg" alt="" loading="lazy" />
-              </button>
-              <button class="shot" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
-                <img src="./assets/work1.jpg" alt="" loading="lazy" />
-              </button>
-            </div>
-          </div>
-
         </div>
 
-        <!-- ✅ Tu GRID original (se mantiene) -->
+
+
         <div class="work__grid reveal">
           <button class="work__card" type="button" data-src="./assets/work1.jpg" data-tag="COLOR / REALISMO">
             <img class="work__thumb" src="./assets/work1.jpg" alt="Trabajo 1" loading="lazy" />
-            <span class="work__tag">COLOR / REALISMO</span>
+            <span class="work__tag">COLOR</span>
           </button>
 
           <button class="work__card" type="button" data-src="./assets/work2.jpg" data-tag="BLACK & GREY">
             <img class="work__thumb" src="./assets/work2.jpg" alt="Trabajo 2" loading="lazy" />
-            <span class="work__tag">BLACK & GREY</span>
+            <span class="work__tag">GRISES</span>
           </button>
 
           <button class="work__card" type="button" data-src="./assets/work3.jpg" data-tag="COLOR / REALISMO">
             <img class="work__thumb" src="./assets/work3.jpg" alt="Trabajo 3" loading="lazy" />
-            <span class="work__tag">COLOR / REALISMO</span>
+            <span class="work__tag">RETRATOS DE MASCOTAS</span>
           </button>
 
           <button class="work__card" type="button" data-src="./assets/work4.jpg" data-tag="BLACK & GREY">
             <img class="work__thumb" src="./assets/work4.jpg" alt="Trabajo 4" loading="lazy" />
-            <span class="work__tag">BLACK & GREY</span>
-          </button>
-
-          <button class="work__card" type="button" data-src="./assets/work5.jpg" data-tag="BLACK & GREY">
-            <img class="work__thumb" src="./assets/work5.jpg" alt="Trabajo 5" loading="lazy" />
-            <span class="work__tag">BLACK & GREY</span>
-          </button>
-
-          <button class="work__card" type="button" data-src="./assets/work6.jpg" data-tag="BLACK & GREY">
-            <img class="work__thumb" src="./assets/work6.jpg" alt="Trabajo 6" loading="lazy" />
-            <span class="work__tag">BLACK & GREY</span>
-          </button>
-
-          <button class="work__card" type="button" data-src="./assets/work7.jpg" data-tag="COLOR / REALISMO">
-            <img class="work__thumb" src="./assets/work7.jpg" alt="Trabajo 7" loading="lazy" />
-            <span class="work__tag">COLOR / REALISMO</span>
-          </button>
-
-          <button class="work__card" type="button" data-src="./assets/work8.jpg" data-tag="BLACK & GREY">
-            <img class="work__thumb" src="./assets/work8.jpg" alt="Trabajo 8" loading="lazy" />
-            <span class="work__tag">BLACK & GREY</span>
+            <span class="work__tag">OTROS</span>
           </button>
         </div>
+
       </div>
     </section>
     <!-- SPONSORS -->
@@ -488,16 +412,7 @@
                 placeholder="Cuéntame el concepto, tamaño aproximado y referencias…"></textarea>
             </div>
 
-            <div class="form__row">
-              <div class="field">
-                <label>Referencias (imágenes)</label>
-                <input type="file" name="refs" accept="image/*" multiple />
-              </div>
-              <div class="field">
-                <label>Foto de la zona (opcional)</label>
-                <input type="file" name="zone_photo" accept="image/*" />
-              </div>
-            </div>
+
 
             <div class="form__actions">
               <button class="btn btn--primary" type="submit">Enviar solicitud</button>
@@ -506,14 +421,7 @@
           </form>
 
           <div class="book__side">
-            <div class="card reveal">
-              <h3>Reglas rápidas</h3>
-              <ul>
-                <li>Trabajo por cita (separación con señal).</li>
-                <li>Reprogramaciones con anticipación.</li>
-                <li>Prioridad a piezas grandes y proyectos completos.</li>
-              </ul>
-            </div>
+
 
             <div class="card reveal">
               <h3>Contacto</h3>
