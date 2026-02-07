@@ -62,7 +62,7 @@
     </div>
   </aside>
 
-  <!-- Top bar -->
+
   <header class="topbar">
     <div class="topbar__left">
       <a class="topbar__brand" href="#home" aria-label="Inicio">
@@ -79,11 +79,10 @@
     </nav>
 
     <div class="topbar__right">
-      <!-- ✅ contenedor con estilo propio para Translate -->
-      <div class="lang" aria-label="Idioma">
+      <!-- ✅ Slot desktop para translate (aquí lo dejamos en desktop) -->
+      <div class="lang" id="langSlotTopbar" aria-label="Idioma">
         <div id="google_translate_element"></div>
       </div>
-
 
       <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" type="button">
         <span></span><span></span>
@@ -91,35 +90,33 @@
     </div>
   </header>
 
-
-
-  <!-- Mobile drawer -->
+  <!-- ✅ Drawer (menú móvil) -->
   <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer__panel">
+    <div class="drawer__backdrop" id="drawerBackdrop"></div>
+
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menú">
       <div class="drawer__head">
         <div class="drawer__title">Menú</div>
-        <button class="drawer__close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+        <button class="drawer__close" id="drawerClose" type="button" aria-label="Cerrar menú">✕</button>
       </div>
 
-      <nav class="drawer__nav">
-        <a href="#home" class="drawer__link">Home</a>
-        <a href="#about" class="drawer__link">About</a>
-        <a href="#work" class="drawer__link">Work</a>
-        <a href="#book" class="drawer__link">Book</a>
-        <a href="#contact" class="drawer__link">Contact</a>
+      <!-- ✅ Slot móvil para translate (aquí lo movemos en responsive) -->
+      <div class="drawer__lang" id="langSlotDrawer"></div>
+
+      <nav class="drawer__nav" aria-label="Navegación móvil">
+        <a class="drawer__link" href="#home">Home</a>
+        <a class="drawer__link" href="#about">About</a>
+        <a class="drawer__link" href="#work">Work</a>
+        <a class="drawer__link" href="#book">Book</a>
+        <a class="drawer__link" href="#contact">Contact</a>
       </nav>
 
-      <div class="lang" style="margin: 12px 0;">
-        <div id="google_translate_element_mobile"></div>
-      </div>
-
-
       <div class="drawer__cta">
-        <a class="pillbtn pillbtn--wide" href="#book">Reservar cita</a>
+        <a class="pillbtn pillbtn--wide" href="#book">Reservar</a>
       </div>
     </div>
-    <div class="drawer__backdrop" id="drawerBackdrop"></div>
   </div>
+
 
   <main class="page">
 
